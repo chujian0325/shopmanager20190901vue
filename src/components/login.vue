@@ -15,36 +15,36 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       formdata: {
-        username: "",
-        password: ""
+        username: '',
+        password: ''
       }
-    };
+    }
   },
   methods: {
-    handleLogin() {
+    handleLogin () {
       this.$http
-        .post("login", this.formdata)
+        .post('login', this.formdata)
         .then(res => {
           // console.log(res);
           const {
             data: {
               meta: { status, msg }
             }
-          } = res;
+          } = res
           if (status === 200) {
           } else {
-            this.$message.error(msg);
+            this.$message.error(msg)
           }
         })
         .catch(err => {
-          console.log(err);
-        });
+          console.log(err)
+        })
     }
   }
-};
+}
 </script>
 
 <style>

@@ -6,17 +6,17 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '../src/assets/base.css'
-Vue.use(ElementUI)
-Vue.config.productionTip = false
 
 import axios from 'axios'
+Vue.use(ElementUI)
+Vue.config.productionTip = false
 axios.defaults.baseURL = 'http://localhost:8888/api/private/v1/' // 接口基准地址（在接口文档中查看）
 Vue.prototype.$http = axios
 
 /* eslint-disable no-new */
 new Vue({
-    el: '#app',
-    router,
-    components: { App },
-    template: '<App/>'
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
 })
