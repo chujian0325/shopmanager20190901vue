@@ -1,5 +1,5 @@
 <template>
-  <div class="login-warp">
+  <div class="login-wrap">
     <el-form class="login-form" label-position="top" label-width="80px" :model="formdata">
       <h2>用户登录</h2>
       <el-form-item label="用户名">
@@ -27,4 +27,23 @@ export default {
 </script>
 
 <style>
+.login-wrap {
+  /* 注意: 百分比布局 父元素要有height，是一层一层设置的 */
+  height: 100%;
+  background-color: #324152;
+  /* 以下三行代码是伸缩布局设置盒子垂直水平居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-form {
+  background-color: #ffffff;
+  border-radius: 5px;
+  /* 开发 */
+  width: 400px;
+  padding: 30px;
+}
+.login-btn {
+  width: 100%;
+}
 </style>
